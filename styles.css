@@ -17,9 +17,9 @@ body {
 }
 
 .pantalla {
-    width: 90%; /* Ajustar el ancho al 90% del contenedor */
-    max-width: 800px; /* Definir un ancho máximo */
-    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    width: 80%; /* Ajustar el ancho al 80% del contenedor */
+    max-width: 600px; /* Definir un ancho máximo más pequeño */
+    aspect-ratio: 16 / 9; /* Mantener una relación de aspecto 16:9 */
     background-color: #444;
     border: 5px solid #fff;
     position: relative;
@@ -58,7 +58,7 @@ body {
 /* Media Queries para Responsividad */
 @media (max-width: 600px) {
     .pantalla {
-        width: 95%; /* Ajustar el ancho al 95% en pantallas pequeñas */
+        width: 90%; /* Ajustar el ancho al 90% en pantallas pequeñas */
     }
 
     #reproducir {
