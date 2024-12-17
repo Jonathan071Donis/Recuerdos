@@ -14,36 +14,37 @@ body {
     justify-content: center;
     height: 100vh;
     z-index: 5; /* Colocar encima del fondo */
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .pantalla {
-    width: 80%; /* Ajustar el ancho al 80% del contenedor */
-    max-width: 600px; /* Definir un ancho máximo más pequeño */
-    aspect-ratio: 16 / 9; /* Mantener una relación de aspecto 16:9 */
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    max-width: 350px; /* Ajustar a un tamaño más pequeño */
+    height: auto;
+    aspect-ratio: 9 / 16; /* Relación vertical similar a la imagen */
     background-color: #444;
-    border: 5px solid #fff;
-    position: relative;
+    border: 4px solid #fff; /* Bordes ligeramente más delgados */
+    border-radius: 8px; /* Bordes ligeramente redondeados */
     overflow: hidden;
-    display: flex; /* Flexbox para centrar las imágenes */
-    align-items: center; /* Centra verticalmente las imágenes */
-    justify-content: center; /* Centra horizontalmente las imágenes */
-    margin: 0 auto; /* Centra la pantalla horizontalmente */
+    display: flex;
+    align-items: center; /* Centrar contenido verticalmente */
+    justify-content: center; /* Centrar contenido horizontalmente */
 }
 
 .pantalla img {
-    max-width: 100%; /* Limita el ancho máximo al 100% del contenedor */
-    max-height: 100%; /* Limita la altura máxima al 100% del contenedor */
-    object-fit: contain; /* Mantiene la proporción de la imagen dentro del contenedor */
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajustar imagen para cubrir toda la pantalla */
 }
 
 .pie {
-    margin-top: 20px;
-    text-align: center; /* Centra el texto en el pie */
+    margin-top: 15px; /* Ajustar margen superior */
 }
 
 #reproducir {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 8px 16px;
+    font-size: 15px;
     background-color: #ff4081;
     color: white;
     border: none;
@@ -55,21 +56,21 @@ body {
     background-color: #ff79b0;
 }
 
-/* Media Queries para Responsividad */
-@media (max-width: 600px) {
+/* Responsive */
+@media (max-width: 768px) {
     .pantalla {
-        width: 90%; /* Ajustar el ancho al 90% en pantallas pequeñas */
-    }
-
-    #reproducir {
-        font-size: 14px; /* Reducir el tamaño de fuente en pantallas pequeñas */
-        padding: 8px 16px; /* Ajustar el padding */
+        max-width: 80%; /* Reducir tamaño para tablets */
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
+    .pantalla {
+        max-width: 90%; /* Ajustar pantalla para móviles */
+        border-width: 3px; /* Bordes más delgados */
+    }
+    
     #reproducir {
-        font-size: 12px; /* Reducir aún más el tamaño de fuente */
-        padding: 6px 12px; /* Ajustar el padding */
+        font-size: 13px;
+        padding: 6px 12px;
     }
 }
