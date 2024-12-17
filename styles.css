@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom right, #a2c2e8, #f0e68c); /* Gradiente de color suave */
+    color: #000; /* Cambiar el color del texto a negro para mayor legibilidad */
+    position: relative; /* Necesario para posicionar elementos absolutos */
+    overflow: hidden; /* Ocultar el desbordamiento */
+}
+
+.cine {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    z-index: 5; /* Colocar encima del fondo */
+}
+
+.pantalla {
+    width: auto; /* Permitir que el ancho se ajuste automáticamente */
+    height: auto; /* Permitir que la altura se ajuste automáticamente */
+    background-color: #444;
+    border: 5px solid #fff;
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Flexbox para centrar las imágenes */
+    align-items: center; /* Centra verticalmente las imágenes */
+    justify-content: center; /* Centra horizontalmente las imágenes */
+}
+
+.pantalla img {
+    max-width: 100%; /* Limita el ancho máximo al 100% del contenedor */
+    max-height: 100%; /* Limita la altura máxima al 100% del contenedor */
+    object-fit: contain; /* Mantiene la proporción de la imagen dentro del contenedor */
+}
+
+.pie {
+    margin-top: 20px;
+}
+
+#reproducir {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reproducir:hover {
+    background-color: #ff79b0;
+}
