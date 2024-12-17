@@ -17,7 +17,8 @@ body {
 }
 
 .pantalla {
-    width: auto; /* Permitir que el ancho se ajuste automáticamente */
+    width: 90%; /* Ajustar el ancho al 90% del contenedor */
+    max-width: 800px; /* Definir un ancho máximo */
     height: auto; /* Permitir que la altura se ajuste automáticamente */
     background-color: #444;
     border: 5px solid #fff;
@@ -26,6 +27,7 @@ body {
     display: flex; /* Flexbox para centrar las imágenes */
     align-items: center; /* Centra verticalmente las imágenes */
     justify-content: center; /* Centra horizontalmente las imágenes */
+    margin: 0 auto; /* Centra la pantalla horizontalmente */
 }
 
 .pantalla img {
@@ -36,6 +38,7 @@ body {
 
 .pie {
     margin-top: 20px;
+    text-align: center; /* Centra el texto en el pie */
 }
 
 #reproducir {
@@ -50,4 +53,23 @@ body {
 
 #reproducir:hover {
     background-color: #ff79b0;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 600px) {
+    .pantalla {
+        width: 95%; /* Ajustar el ancho al 95% en pantallas pequeñas */
+    }
+
+    #reproducir {
+        font-size: 14px; /* Reducir el tamaño de fuente en pantallas pequeñas */
+        padding: 8px 16px; /* Ajustar el padding */
+    }
+}
+
+@media (max-width: 400px) {
+    #reproducir {
+        font-size: 12px; /* Reducir aún más el tamaño de fuente */
+        padding: 6px 12px; /* Ajustar el padding */
+    }
 }

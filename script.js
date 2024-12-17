@@ -10,6 +10,14 @@ let indice = 0;
 const imagenElement = document.getElementById('imagen');
 const musica = document.getElementById('musica');
 
+// Precarga de imágenes
+function precargarImagenes() {
+    imagenes.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+}
+
 function cambiarImagen() {
     imagenElement.src = imagenes[indice];
     indice = (indice + 1) % imagenes.length;
@@ -26,12 +34,13 @@ document.getElementById('reproducir').addEventListener('click', () => {
 
 // Al cargar la página
 window.onload = function() {
+    precargarImagenes(); // Llama a la función de precarga
     swal({
         title: "PRINCESA ENOJONA",
         text: "GRACIAS POR REGALARME UN LINDO AÑO A TU LADO",
         icon: "success",
-        buttons: false, // Eliminar el botón "OK"
-        timer: 5000, // Dura 5 segundos
+        buttons: false,
+        timer: 5000,
         content: {
             element: "div",
             attributes: {
